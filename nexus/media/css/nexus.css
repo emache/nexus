@@ -42,7 +42,7 @@ pre {
 }
 
 body {
-    background-color: #eee;
+    background-color: #fafafc;
 }
 
 input[type=text], input[type=password], select, textarea {
@@ -77,16 +77,15 @@ fieldset h2 {
 }
 
 #header {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#437ba3', endColorstr='#234b6f'); /* for IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#437ba3), to(#234b6f)); /* for webkit browsers */
-    background: -moz-linear-gradient(top,  #555,  #437ba3); /* for firefox 3.6+ */        
+    background-color: #ffffff;
     padding: 20px;
     margin: 0 0 20px;
+    border-bottom: 2px solid #d5d9db;
 }
 
 #header h1, #header h2 {
-    font-family: 'Yanone Kaffeesatz', arial, serif;    
-    color: #fff;
+    font-family: 'Yanone Kaffeesatz', arial, serif;
+    color: #084e80;
     display: inline;
     font-size: 20pt;
     font-weight: normal;
@@ -97,23 +96,29 @@ fieldset h2 {
     padding: 5px 0 10px;
     background-repeat: no-repeat;
     background-position: top middle;
-    padding-left: 54px;
+    padding-left: 60px;
 }
 
 #header h1 img {
     position: absolute;
-    top: -30px;
-    left: -70px;
+    top: -10px;
+    left: -15px;
     z-index: 999;
-    width: 107px;
-    height: 106px;
+    height: 50px;
+    width: 58px;
     display: block;
-
 }
 
 #header h2 {
     margin-left: 5px;
     color: #ccc;
+}
+
+#header h2::before {
+    content: '\007C';
+    font-size: 25px;
+    color: #f2f2f2;
+    margin-right: 5px;
 }
 
 #navigation {
@@ -135,18 +140,12 @@ fieldset h2 {
 #navigation .wrapper > ul > li > span {
     color: #666;
     display: inline-block;
-    -webkit-border-radius: 6px 6px 0 0;
-    -moz-border-radius: 6px 6px 0 0;
-    border-radius: 6px 6px 0 0;
-    
     cursor: pointer;
-    
-    padding: 5px 12px;
+    padding: 10px 20px;
     text-decoration: none;
-    
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    border: 1px solid #d5d9db;
+    background-color: #ffffff;
+    border-bottom: none
 }
 
 #navigation li ul {
@@ -154,16 +153,13 @@ fieldset h2 {
     z-index: 101;
     display: none;
     background: #fff;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 #navigation li:hover ul {
     display: block;
 }
 #navigation li ul li a {
     display: block;
-    padding: 5px 12px;
+    padding: 10px 20px;
     text-decoration: none;
 }
 
@@ -193,14 +189,7 @@ fieldset h2 {
     margin: 0 auto 20px;
     padding: 20px;
     background-color: #fff;
-    
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);    
+    border: 1px solid #d5d9db;
 }
 
 #status {
@@ -219,9 +208,12 @@ fieldset h2 {
 }
 
 #footer {
-    background-color: #e5e5e5;
-    border-top: solid 1px #ddd;
-    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #d5d9db;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 #facebox h2 {
@@ -353,12 +345,12 @@ fieldset h2 {
 .button.toggled:focus {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#437ba3', endColorstr='#234b6f'); /* for IE */
     background: -webkit-gradient(linear, left top, left bottom, from(#437ba3), to(#234b6f)); /* for webkit browsers */
-    background: -moz-linear-gradient(top,  #555,  #437ba3); /* for firefox 3.6+ */        
+    background: -moz-linear-gradient(top,  #555,  #437ba3); /* for firefox 3.6+ */
     color: #fff;
     border-color: #537789;
     text-shadow: 0 1px 0 #000;
     -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, .2);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);    
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
 }
 
 #container.login-area .wrapper {
@@ -445,21 +437,21 @@ fieldset h2 {
 }
 .dashboard-module-title {
     font-weight: bold;
-    color: #5A7C9D;
-    border-bottom: 1px solid #ddd;
+    color: #084e80;
+    border-bottom: 1px solid #d5d9db;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 .dashboard-module-title .go-link {
     margin-left: 5px;
-    color: #666;
+    color: #ccc;
     font-weight: normal;
     font-size: 0.9em;
     text-decoration: none;
     text-transform: lowercase;
 }
 .dashboard-module-content {
-    
+
 }
 table {
     width: 100%;
